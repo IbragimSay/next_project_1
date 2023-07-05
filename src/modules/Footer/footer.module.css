@@ -1,0 +1,12 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.footer__mail{
+    text-decoration: none;
+    color: #000;
+}
+.footer__mail:hover{
+    color: #198900;
+}

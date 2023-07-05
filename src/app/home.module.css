@@ -1,0 +1,11 @@
+
+.list__title{
+    cursor: pointer
+}
+.list__text{
+    overflow: hidden;
+    max-height: 0;
+}
+.list__text_active{
+    max-height: 50px;
+}

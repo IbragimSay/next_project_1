@@ -1,0 +1,12 @@
+.list{
+    list-style: none;
+    display: flex;
+    column-gap: 20px;
+}
+.list__link{
+    text-decoration: none;
+    color: #000;
+}
+.list__link:hover{
+    color: #198900
+}
