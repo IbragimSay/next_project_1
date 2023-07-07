@@ -8,29 +8,30 @@ import { useState } from 'react'
 
 export default function Home() {
 
-  const [data, setData]= useState([
-    {id: 1,
-      text: 'fdsklm jsfklajdlkf mfsklm',
-      isActive: false
-    },
-    {id: 2,
-      text: 'fdsklm jsfklajdlkf mfsklm',
-      isActive: false
-    },
-    {id: 3,
-      text: 'fdsklm jsfklajdlkf mfsklm',
-      isActive: false
-    }
-  ])
+    const [data, setData]= useState([
+      {id: 1,
+        text: 'fdsklm jsfklajdlkf mfsklm',
+        isActive: false
+      },
+      {id: 2,
+        text: 'fdsklm jsfklajdlkf mfsklm',
+        isActive: false
+      },
+      {id: 3,
+        text: 'fdsklm jsfklajdlkf mfsklm',
+        isActive: false
+      }
+    ])
 
   const ActivClick=(current: any)=>{
-    setData(data.map((item)=>{
-      if(current.id == item.id){
+    setData([...data].map((item)=>{
+      if(item.id == current.id){
         item.isActive = !item.isActive
       }
       return item
     }))
   }
+
 
   return (
     <div className="contener">

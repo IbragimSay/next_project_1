@@ -5,6 +5,7 @@
 .list__text{
     overflow: hidden;
     max-height: 0;
+    transition: 0.7s;
 }
 .list__text_active{
     max-height: 50px;
