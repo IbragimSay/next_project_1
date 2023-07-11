@@ -10,44 +10,44 @@ export default function Home() {
 
     const [data, setData]= useState([
       {id: 1,
-        text: 'fdsklm jsfklajdlkf mfsklm',
+        text: 'tab 1 Argen Ibragim',
         isActive: false
       },
       {id: 2,
-        text: 'fdsklm jsfklajdlkf mfsklm',
+        text: 'tab 2 Argen Ibragim',
         isActive: false
       },
       {id: 3,
-        text: 'fdsklm jsfklajdlkf mfsklm',
+        text: 'tab 3 Argen Ibragim',
         isActive: false
       }
+      
     ])
 
-  const ActivClick=(current: any)=>{
-    setData([...data].map((item)=>{
-      if(item.id == current.id){
-        item.isActive = !item.isActive
-      }
-      return item
-    }))
-  }
+
+    const ActivClick =(curent: any) =>{
+      setData(data.map(item=>{
+        if(item.id == curent.id){
+          item.isActive = !item.isActive
+        }
+        return item
+      }))
+
+    }
 
 
-  return (
-    <div className="contener">
-      <h1>home</h1>
-      <div className={s.list}>
-        {data.map((item, index)=>(
-          <div  className={s.list__item} key={item.id}>
-            <h2 onClick={()=>{ActivClick(item)}} className={s.list__title}>{index + 1}</h2>
-            <div className={classNames(s.list__text, {
-              [s.list__text_active]: item.isActive
-            })}>
-              {item.text}
+      return (
+        <div className="contener">
+          <h1>home</h1>
+          {data.map((item)=>(
+            <div key={item.id}>
+              <h1 onClick={()=>ActivClick(item)} className={s.list__title}>{item.id}</h1>
+              <h2 className={classNames(s.list__text, {
+                [s.list__text_active]: item.isActive
+              })}>{item.text}</h2>
             </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
+          ))}
+
+        </div>
+      )
+    }

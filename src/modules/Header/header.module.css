@@ -8,6 +8,10 @@
     text-decoration: none;
     color: #000
 }
+.header__link_active{
+    text-decoration: none;
+    color: #156a02;
+}
 .header__link:hover{
     color: #198900;
 }
