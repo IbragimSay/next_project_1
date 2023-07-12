@@ -1,0 +1,30 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding-top: 20px;
+    &__span{
+        position: absolute;
+        transition: 0.2s;
+    }
+    &__input_custom:focus{
+        ~span{
+            margin-top: -20px;
+            font-size: 12px;
+        }
+    }
+    &__input_custom:not(:placeholder-shown){
+        ~span{
+            margin-top: -20px;
+            font-size: 12px;
+        }
+    }
+
+
+
+
+    
+
+
+
+}

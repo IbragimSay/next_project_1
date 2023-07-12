@@ -1,5 +1,6 @@
 import Link from "next/link"
-import s from './about.module.css'
+import s from './about.module.scss'
+import { About_link } from "@/constant/header_link"
 
 export default function({
     children,
@@ -9,8 +10,9 @@ export default function({
     return(
         <div className="contener">
             <ul className={s.list}>
-                <li className={s.list__item}><Link className={s.list__link} href='/About/name'>Name</Link></li>
-                <li className={s.list__item}> <Link className={s.list__link} href='/About/age'>Age</Link></li>
+            {About_link.map(item=>(
+                <li className={s.list__item}><Link className={s.list__link} href={item.href}>{item.labe}</Link></li>
+              ))}
             </ul>
             {children}
         </div>

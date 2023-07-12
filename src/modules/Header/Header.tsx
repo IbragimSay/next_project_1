@@ -1,14 +1,13 @@
 'use client'
 import Link from 'next/link'
 import React from 'react'
-import  s from './header.module.css'
+import  s from './header.module.scss'
 import { Header_link } from '@/constant/header_link'
 import {usePathname} from 'next/navigation'
 import classNames from 'classnames'
 
-const Header = () => {
+export function Header() {
   const pathname = usePathname()
-  
   return (
     <header className={s.header}>
         {Header_link.map((item)=>(
@@ -19,5 +18,4 @@ const Header = () => {
     </header>
   )
 }
-
 export default Header

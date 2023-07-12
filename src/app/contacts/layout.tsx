@@ -1,5 +1,6 @@
 import Link from "next/link"
-import s from './contact.module.css'
+import s from "./contact.module.css"
+import { Contacts_link } from "@/constant/header_link"
 
 export default function({
     children,
@@ -9,8 +10,10 @@ export default function({
     return(
         <div className="contener">
             <ul className={s.list}>
-                <li className={s.list__item}><Link className={s.list__link} href='/contacts/mail'> mail</Link></li>
-                <li className={s.list__item}><Link className={s.list__link} href='/contacts/number'>number</Link></li>
+              {Contacts_link.map(item=>(
+                <li className={s.list__item}><Link className={s.list__link} href={item.href}>{item.labe}</Link></li>
+              ))}
+                
             </ul>
             {children}
         </div>

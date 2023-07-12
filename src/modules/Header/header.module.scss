@@ -1,0 +1,19 @@
+.header{
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    padding: 20px;
+    &__link{
+        text-decoration: none;
+        color: #000
+    }
+    &__link_active{
+        text-decoration: none;
+        color: #156a02;
+    }
+    &__link:hover{
+        color: #198900;
+    }
+    
+}
+
