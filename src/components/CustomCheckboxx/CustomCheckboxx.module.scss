@@ -1,0 +1,25 @@
+.wraper{
+    display: flex;
+    &__checkbox{
+        display: none;
+    }
+    &__fake{
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #000;
+        border-radius: 50%;
+    }
+    &__checkbox:checked ~ &__fake{
+        &::after{
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: red;
+            border-radius: 50%;
+            top: 1.5px;
+            left: 1.5px;
+        }
+    }
+}

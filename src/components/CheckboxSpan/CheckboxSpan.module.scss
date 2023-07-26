@@ -1,0 +1,28 @@
+.wraper{
+    &__checkbox{
+        display: none;
+    }
+    &__span{
+        display: block;
+        width: 28px;
+        height: 28px;
+        background-color: black;
+        z-index: 1;
+        border-radius: 50%;
+    }
+    &__fake{
+        display: block;
+        width: 60px;
+        height: 30px;
+        background-color: red;
+        border: 1px solid #000;
+        border-radius: 20px;
+        z-index: 0;
+    }
+    &__checkbox:checked ~ &__fake{
+        .wraper__span{
+            margin-left: 30px;
+        }   
+        background-color: green;
+    }
+}
